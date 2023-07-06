@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/0f5f61a4ad.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="app">
+        <div class="screen join-screen active">
+            <div class="form">
+                <h2>Join Chatroom</h2>
+                <div class="form-input">
+                    <label>Username</label>
+                    <input type="text" id="username">
+                </div>
+                <div class="form-input">
+                    <button id="join-user">Join</button>
+                </div>
+            </div>
+        </div>
+        <div class="screen chat-screen">
+            <div class="users-container">
+                <h3>Chats</h3>
+                <div class="users"></div>
+                <div id="profile"></div>
+            </div>
+            <div class="messages-container">
+                <div class="header">
+                    <div class="logo">Chatroom</div>
+                    <h4 id="user-name"></h4>
+                    <button id="exit-chat">exit-chat</button>
+                </div>
+                <div class="messages">
+                    <!-- Dummy Messages -->
+                    <!-- <div class="message my-message">
+                        <div>
+                            <div class="name">You</div>
+                            <div class="text">Hi</div>
+                        </div>
+                    </div>
+                    <div class="update">
+                        Abc is joined to conversation!
+                    </div>
+                    <div class="typing">
+                        Abc is joined to conversation!
+                    </div>
+                    <div class="message other-message">
+                        <div>
+                            <div class="name">Abc</div>
+                            <div class="text">Hi</div>
+                        </div>
+                    </div> -->
+                    <div id="feedback" class="typing"></div>
+                </div>
+                <div class="typebox">
+                    <input type="text" id="message-input">
+                    <button id="send-message">Send</button>
+                </div>
+            </div>
+            <div class="welcome-page">
+                <h3>Welcome to Our chatroom!</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <script id="data" type="text/javascript" src="socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="./client.js"></script>
+    
+</body>
+
+</html>
